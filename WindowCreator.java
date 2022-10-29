@@ -7,6 +7,7 @@ public class WindowCreator {
         ShapesManager shapesManager = new ShapesManager();
         shapesManager.addShape(new Circle(200,200,Color.blue,false, 100));
         shapesManager.addShape(new Rectangle(200,200,Color.green,false,100,100));
+        shapesManager.addShape(new Rectangle(400,300,Color.red, true, 50,100));
 
         //Create and configure our JFrame (window)
         CustomWindow customWindow = new CustomWindow(shapesManager);

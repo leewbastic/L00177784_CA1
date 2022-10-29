@@ -11,7 +11,12 @@ public class Rectangle extends Shape {
 
     @Override
     public void drawShape(Graphics g) {
-        g.drawRect(xCenter - width/2,yCenter - width/2, width, height);
+        g.setColor(colour);
+        if (filled == false) {
+            g.drawRect(xCenter - width / 2, yCenter - width / 2, width, height);
+        } else {
+            g.fillRect(xCenter - width / 2, yCenter - width / 2, width, height);
+        }
     }
 
     @Override
