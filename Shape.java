@@ -2,11 +2,11 @@ import java.awt.*;
 
 public abstract class Shape {
 
-    protected String colour;
+    protected Color colour;
     protected boolean filled;
     protected int xCenter,yCenter;
 
-    public Shape(int xCenter, int yCenter, String colour, boolean filled) {
+    public Shape(int xCenter, int yCenter, Color colour, boolean filled) {
         this.colour = colour;
         this.filled = filled;
         this.xCenter = xCenter;
