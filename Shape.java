@@ -13,6 +13,38 @@ public abstract class Shape {
         this.yCenter = yCenter;
     }
 
+    public Color getColour() {
+        return colour;
+    }
+
+    public void setColour(Color colour) {
+        this.colour = colour;
+    }
+
+    public boolean isFilled() {
+        return filled;
+    }
+
+    public void setFilled(boolean filled) {
+        this.filled = filled;
+    }
+
+    public int getxCenter() {
+        return xCenter;
+    }
+
+    public void setxCenter(int xCenter) {
+        this.xCenter = xCenter;
+    }
+
+    public int getyCenter() {
+        return yCenter;
+    }
+
+    public void setyCenter(int yCenter) {
+        this.yCenter = yCenter;
+    }
+
     public abstract void drawShape(Graphics g);
 
     @Override
