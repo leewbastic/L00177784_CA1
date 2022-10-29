@@ -4,8 +4,7 @@ public abstract class Shape {
 
     protected String colour;
     protected boolean filled;
-    protected int xCenter;
-    protected int yCenter;
+    protected int xCenter,yCenter;
 
     public Shape(int xCenter, int yCenter, String colour, boolean filled) {
         this.colour = colour;
