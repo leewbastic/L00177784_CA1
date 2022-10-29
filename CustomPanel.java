@@ -11,7 +11,6 @@ public class CustomPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics graphicsContext) {
         super.paintComponent(graphicsContext);
-
         shapesManager.drawShapes(graphicsContext);
 
     }

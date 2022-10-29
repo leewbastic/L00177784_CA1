@@ -5,9 +5,11 @@ public class WindowCreator {
     public static void main(String[] args) {
 
         ShapesManager shapesManager = new ShapesManager();
+        shapesManager.setDisplayName(true);
+        shapesManager.setDisplayBoundingBox(false);
         shapesManager.addShape(new Circle(200,200,Color.blue,false, 100));
-        shapesManager.addShape(new Rectangle(200,200,Color.green,false,100,100));
-        shapesManager.addShape(new Rectangle(400,300,Color.red, true, 50,100));
+        shapesManager.addShape(new Rectangle(51,51,Color.red, false, 50,100));
+        shapesManager.addShape(new Square(600,100,Color.yellow,true,80));
 
         //Create and configure our JFrame (window)
         CustomWindow customWindow = new CustomWindow(shapesManager);

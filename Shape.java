@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.Point;
 
 public abstract class Shape {
 
@@ -46,6 +47,11 @@ public abstract class Shape {
     }
 
     public abstract void drawShape(Graphics g);
+
+    public void displayName(Graphics g){
+        g.setColor(Color.black);
+        g.drawString(getClass().getSimpleName(),xCenter,yCenter);
+    }
 
     @Override
     public String toString() {

@@ -1,7 +1,8 @@
 import java.awt.*;
 
 public class Rectangle extends Shape {
-    private int width, height;
+    protected int width;
+    private int height;
 
     public Rectangle(int xCenter, int yCenter, Color colour, boolean filled, int width, int height) {
         super(xCenter, yCenter, colour, filled);
@@ -9,13 +10,18 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
+    public Rectangle(int xCenter, int yCenter, Color colour, boolean filled, int width) {
+        super(xCenter, yCenter, colour, filled);
+        this.width = width;
+    }
+
     @Override
     public void drawShape(Graphics g) {
         g.setColor(colour);
-        if (filled == false) {
-            g.drawRect(xCenter - width / 2, yCenter - width / 2, width, height);
+        if (!filled) {
+            g.drawRect(xCenter - width / 2, yCenter - height / 2, width, height);
         } else {
-            g.fillRect(xCenter - width / 2, yCenter - width / 2, width, height);
+            g.fillRect(xCenter - width / 2, yCenter - height / 2, width, height);
         }
     }
 

@@ -1,8 +1,7 @@
 import java.awt.*;
 
 public class Circle extends Shape{
-    private int radius;
-
+    private final int radius;
 
     public Circle(int xCenter, int yCenter, Color colour, boolean filled, int radius) {
         super(xCenter, yCenter, colour, filled);
