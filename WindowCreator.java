@@ -5,7 +5,7 @@ public class WindowCreator {
     public static void main(String[] args) {
 
         ShapesManager shapesManager = new ShapesManager();
-        shapesManager.setDisplayName(true);
+        shapesManager.setDisplayName(false);
         shapesManager.setDisplayBoundingBox(false);
         shapesManager.addShape(new Circle(400,400,Color.blue,false, 80));
         shapesManager.addShape(new Rectangle(50,300,Color.red, false, 75,100));

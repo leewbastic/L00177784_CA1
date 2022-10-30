@@ -6,6 +6,7 @@ public abstract class Shape {
     protected Color colour;
     protected boolean filled;
     protected int xCenter,yCenter;
+    protected BoundingBox boundingBox;
 
     public Shape(int xCenter, int yCenter, Color colour, boolean filled) {
         this.colour = colour;
@@ -46,7 +47,13 @@ public abstract class Shape {
         this.yCenter = yCenter;
     }
 
+    public abstract void setupBoundingBox();
+
+    public BoundingBox getBoundingBox() {
+        return boundingBox;
+    }
     public abstract void drawShape(Graphics g);
+    public abstract void drawBoundingBox(Graphics g);
 
     public void displayName(Graphics g){
         g.setColor(Color.black);

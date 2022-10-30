@@ -9,6 +9,13 @@ public class BoundingBox {
         this.topRight = topRight;
     }
 
+    public Point getBottomLeft() {
+        return bottomLeft;
+    }
+
+    public Point getTopRight() {
+        return topRight;
+    }
 
     @Override
     public String toString() {
