@@ -1,15 +1,21 @@
+import org.w3c.dom.css.Rect;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Point;
 
 public class WindowCreator {
     public static void main(String[] args) {
 
         ShapesManager shapesManager = new ShapesManager();
-        shapesManager.setDisplayName(false);
-        shapesManager.setDisplayBoundingBox(false);
+        shapesManager.setDisplayName(true);
+        shapesManager.setDisplayBoundingBox(true);
         shapesManager.addShape(new Circle(400,400,Color.blue,false, 80));
         shapesManager.addShape(new Rectangle(50,300,Color.red, false, 75,100));
         shapesManager.addShape(new Square(600,100,Color.yellow,true,80));
+        Rectangle rect1 = new Rectangle(500,300,Color.pink,true,50,60);
+        shapesManager.addShape(new Quadrilateral(rect1));
+        shapesManager.addShape(new Quadrilateral(new Point(500,500),new Point(500,400), new Point(550,420), new Point(525,540), new Point(480,480)));
 
         //Create and configure our JFrame (window)
         CustomWindow customWindow = new CustomWindow(shapesManager);

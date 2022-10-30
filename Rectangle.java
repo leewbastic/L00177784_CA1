@@ -3,7 +3,7 @@ import java.awt.Point;
 
 public class Rectangle extends Shape {
     protected int width;
-    private int height;
+    protected int height;
 
     public Rectangle(int xCenter, int yCenter, Color colour, boolean filled, int width, int height) {
         super(xCenter, yCenter, colour, filled);
