@@ -57,5 +57,4 @@ public class CustomPanel extends JPanel {
         super.paintComponent(graphicsContext);
         shapesManager.drawShapes(graphicsContext);
     }
-
 }

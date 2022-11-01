@@ -16,5 +16,4 @@ public class BoundingBox {
     public Point getTopRight() {
         return topRight;
     }
-
 }

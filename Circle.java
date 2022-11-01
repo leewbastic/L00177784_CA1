@@ -30,5 +30,4 @@ public class Circle extends Shape {
     public void setupBoundingBox() {
         boundingBox = new BoundingBox(new Point(this.xCenter-radius,this.yCenter+radius),new Point(this.xCenter+radius,this.yCenter-radius));
     }
-
 }

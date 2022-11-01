@@ -24,5 +24,4 @@ public abstract class Shape {
         g.setColor(Color.black);
         g.drawString(getClass().getSimpleName(),xCenter,yCenter);
     }
-
 }

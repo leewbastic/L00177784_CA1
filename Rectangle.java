@@ -43,5 +43,4 @@ public class Rectangle extends Shape implements Moveable {
         this.xCenter += 10;
         setupBoundingBox();
     }
-
 }

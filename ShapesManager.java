@@ -33,5 +33,4 @@ public class ShapesManager {
     public ArrayList<Shape> getShapes() {
         return shapes;
     }
-
 }

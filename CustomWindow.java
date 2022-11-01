@@ -3,10 +3,8 @@ import java.awt.*;
 
 public class CustomWindow extends JFrame {
 
-    private CustomPanel mainPanel;
-
     public CustomWindow(ShapesManager shapesManager) {
-        mainPanel = new CustomPanel(shapesManager);
+        CustomPanel mainPanel = new CustomPanel(shapesManager);
 
         //add new panel to the frame
         add(mainPanel, BorderLayout.CENTER);
@@ -14,6 +12,4 @@ public class CustomWindow extends JFrame {
         //set the dimensions of the frame
         setSize(Consts.FRAME_WIDTH, Consts.FRAME_HEIGHT);
     }
-
-
 }
