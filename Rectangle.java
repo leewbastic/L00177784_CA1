@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.Point;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Moveable{
     protected int width;
     protected int height;
 
@@ -47,4 +47,11 @@ public class Rectangle extends Shape {
                 ", yCenter=" + yCenter +
                 '}';
     }
+
+    @Override
+    public void moveXTenUnits() {
+        this.xCenter += 10;
+        setupBoundingBox();
+    }
+
 }

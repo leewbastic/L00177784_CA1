@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.Point;
 import java.util.Arrays;
 
-public class Quadrilateral extends Shape{
+public class Quadrilateral extends Shape implements Rotateable{
     private Point [] points;
 
     public Quadrilateral(int xCenter, int yCenter, Color colour, boolean filled, Point[] points) {
@@ -36,8 +36,8 @@ public class Quadrilateral extends Shape{
 
     @Override
     public void setupBoundingBox() {
-        int xCoordinates[] = {points[0].x, points[1].x, points[2].x, points[3].x};
-        int yCoordinates[] = {points[0].y, points[1].y, points[2].y, points[3].y};
+        int[] xCoordinates = {points[0].x, points[1].x, points[2].x, points[3].x};
+        int[] yCoordinates = {points[0].y, points[1].y, points[2].y, points[3].y};
         Arrays.sort(xCoordinates);
         Arrays.sort(yCoordinates);
         boundingBox = new BoundingBox(new Point(xCoordinates[0],yCoordinates[3]),new Point(xCoordinates[3],yCoordinates[0]));
@@ -45,19 +45,27 @@ public class Quadrilateral extends Shape{
 
     @Override
     public void drawShape(Graphics g) {
-        int xCoordinates[] = {points[0].x, points[1].x, points[2].x, points[3].x};
-        int yCoordinates[] = {points[0].y, points[1].y, points[2].y, points[3].y};
+        int[] xCoordinates = {points[0].x, points[1].x, points[2].x, points[3].x};
+        int[] yCoordinates = {points[0].y, points[1].y, points[2].y, points[3].y};
         int numberOfPoints = points.length;
         g.setColor(colour);
+        if (filled){
+            g.fillPolygon(xCoordinates, yCoordinates, numberOfPoints);
+        }
         g.drawPolygon(xCoordinates, yCoordinates, numberOfPoints);
     }
 
-   public void getSmallestX(){
-
-   }
     @Override
     public void drawBoundingBox(Graphics g) {
         g.setColor(Color.lightGray);
         g.drawRect(this.boundingBox.getBottomLeft().x, this.boundingBox.getTopRight().y, this.boundingBox.getTopRight().x - this.boundingBox.getBottomLeft().x, this.boundingBox.getBottomLeft().y - this.boundingBox.getTopRight().y);
+    }
+
+    @Override
+    public void rotate90Degrees() {
+        for (int i = 0; i < points.length; i++){
+            points[i] = Utility.rotatePoint(points[i], new Point(this.xCenter, this.yCenter), Consts.ANGLE_TO_ROTATE);
+        }
+        setupBoundingBox();
     }
 }
