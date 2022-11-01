@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.Point;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
     private final int radius;
 
     public Circle(int xCenter, int yCenter, Color colour, boolean filled, int radius) {
@@ -26,20 +26,9 @@ public class Circle extends Shape{
         }
     }
 
-
      @Override
     public void setupBoundingBox() {
         boundingBox = new BoundingBox(new Point(this.xCenter-radius,this.yCenter+radius),new Point(this.xCenter+radius,this.yCenter-radius));
     }
 
-    @Override
-    public String toString() {
-        return "Circle{" +
-                "radius=" + radius +
-                ", colour='" + colour + '\'' +
-                ", filled=" + filled +
-                ", xCenter=" + xCenter +
-                ", yCenter=" + yCenter +
-                '}';
-    }
 }

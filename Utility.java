@@ -4,7 +4,7 @@ public final class Utility {
 
     private Utility(){}
 
-    public static Point rotatePoint(Point point, Point centrePoint, int angle){
+    public static Point rotatePoint(Point point, Point centrePoint, int angle) {
         float sinTheta = (float) Math.sin(Math.toRadians(angle));
         float cosTheta = (float) Math.cos(Math.toRadians(angle));
 

@@ -17,11 +17,4 @@ public class BoundingBox {
         return topRight;
     }
 
-    @Override
-    public String toString() {
-        return "BoundingBox{" +
-                "bottomLeft=" + bottomLeft +
-                ", topRight=" + topRight +
-                '}';
-    }
 }

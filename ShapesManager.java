@@ -1,18 +1,12 @@
 import java.awt.*;
-import java.awt.Point;
-import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class ShapesManager {
     private boolean displayName = true;
     private boolean displayBoundingBox = true;
-
     private ArrayList<Shape> shapes = new ArrayList<>();
 
-
-    public void addShape(Shape shapeToAdd)
-    {
-
+    public void addShape(Shape shapeToAdd) {
         shapes.add(shapeToAdd);
     }
 
@@ -22,7 +16,7 @@ public class ShapesManager {
             if (displayName) {
                 currShape.displayName(graphicsContext);
             }
-            if (displayBoundingBox){
+            if (displayBoundingBox) {
                 currShape.drawBoundingBox(graphicsContext);
             }
         }
@@ -36,17 +30,8 @@ public class ShapesManager {
         this.displayBoundingBox = displayBoundingBox;
     }
 
-    public ArrayList<Shape> getShapes()
-    {
+    public ArrayList<Shape> getShapes() {
         return shapes;
-    }
-
-    private ArrayList<Shape> getIntersectingShape(MouseEvent event){
-        return null;
-    }
-
-    private boolean inBounds(BoundingBox boundingBox, Point point){
-        return true;
     }
 
 }

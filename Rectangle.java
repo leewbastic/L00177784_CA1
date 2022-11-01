@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.Point;
 
-public class Rectangle extends Shape implements Moveable{
+public class Rectangle extends Shape implements Moveable {
     protected int width;
     protected int height;
 
@@ -21,6 +21,7 @@ public class Rectangle extends Shape implements Moveable{
         g.setColor(Color.lightGray);
         g.drawRect(xCenter - width / 2, yCenter - height / 2, width, height);
     }
+
     @Override
     public void drawShape(Graphics g) {
         g.setColor(colour);
@@ -36,17 +37,6 @@ public class Rectangle extends Shape implements Moveable{
         boundingBox = new BoundingBox(new Point(this.xCenter-width/2,this.yCenter+height/2),new Point(this.xCenter+width/2,this.yCenter-height/2));
     }
 
-    @Override
-    public String toString() {
-        return "Rectangle{" +
-                "width=" + width +
-                ", height=" + height +
-                ", colour='" + colour + '\'' +
-                ", filled=" + filled +
-                ", xCenter=" + xCenter +
-                ", yCenter=" + yCenter +
-                '}';
-    }
 
     @Override
     public void moveXTenUnits() {

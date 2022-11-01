@@ -23,11 +23,11 @@ public class CustomPanel extends JPanel {
                     if (e.getButton() != 3) {
                         currShape.filled = !currShape.filled;
                     }else{
-                        if (currShape.getClass().getSimpleName() == "Rectangle") {
+                        if (currShape.getClass().getSimpleName().equals("Rectangle")) {
                             Rectangle r = (Rectangle) currShape;
                             r.moveXTenUnits();
                         }
-                        if (currShape.getClass().getSimpleName() == "Quadrilateral"){
+                        if (currShape.getClass().getSimpleName().equals("Quadrilateral")){
                             Quadrilateral q = (Quadrilateral) currShape;
                             q.rotate90Degrees();
                         }
@@ -37,7 +37,7 @@ public class CustomPanel extends JPanel {
             }
         });
     }
-    private ArrayList<Shape> getIntersectingShapes(MouseEvent event){
+    private ArrayList<Shape> getIntersectingShapes(MouseEvent event) {
         ArrayList<Shape> intersectingShapes = new ArrayList<>();
         for (Shape currShape : shapesManager.getShapes()) {
             if (inBounds(currShape.boundingBox, new Point(event.getX(), event.getY()))) {
@@ -49,10 +49,7 @@ public class CustomPanel extends JPanel {
 
     private boolean inBounds(BoundingBox boundingBox, Point point)
     {
-        if ((point.getX()>boundingBox.getBottomLeft().x && point.getX()<boundingBox.getTopRight().x) && (point.getY()<boundingBox.getBottomLeft().y && point.getY()>boundingBox.getTopRight().y)){
-            return true;
-        }
-        return false;
+        return (point.getX() > boundingBox.getBottomLeft().x && point.getX() < boundingBox.getTopRight().x) && (point.getY() < boundingBox.getBottomLeft().y && point.getY() > boundingBox.getTopRight().y);
     }
 
     @Override
@@ -62,4 +59,3 @@ public class CustomPanel extends JPanel {
     }
 
 }
-

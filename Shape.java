@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.awt.Point;
 
 public abstract class Shape {
 
@@ -15,59 +14,15 @@ public abstract class Shape {
         this.yCenter = yCenter;
     }
 
-    public Color getColour() {
-        return colour;
-    }
-
-    public void setColour(Color colour) {
-        this.colour = colour;
-    }
-
-    public boolean isFilled() {
-        return filled;
-    }
-
-    public void setFilled(boolean filled) {
-        this.filled = filled;
-    }
-
-    public int getxCenter() {
-        return xCenter;
-    }
-
-    public void setxCenter(int xCenter) {
-        this.xCenter = xCenter;
-    }
-
-    public int getyCenter() {
-        return yCenter;
-    }
-
-    public void setyCenter(int yCenter) {
-        this.yCenter = yCenter;
-    }
-
     public abstract void setupBoundingBox();
 
-    public BoundingBox getBoundingBox() {
-        return boundingBox;
-    }
     public abstract void drawShape(Graphics g);
 
     public abstract void drawBoundingBox(Graphics g);
 
-    public void displayName(Graphics g){
+    public void displayName(Graphics g) {
         g.setColor(Color.black);
         g.drawString(getClass().getSimpleName(),xCenter,yCenter);
     }
 
-    @Override
-    public String toString() {
-        return "Shape{" +
-                "colour='" + colour + '\'' +
-                ", filled=" + filled +
-                ", xCenter=" + xCenter +
-                ", yCenter=" + yCenter +
-                '}';
-    }
 }

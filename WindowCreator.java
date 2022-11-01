@@ -1,8 +1,6 @@
-import org.w3c.dom.css.Rect;
-
 import javax.swing.*;
-import java.awt.*;
 import java.awt.Point;
+import java.awt.*;
 
 public class WindowCreator {
     public static void main(String[] args) {
@@ -17,7 +15,7 @@ public class WindowCreator {
         shapesManager.addShape(new Quadrilateral(rect1));
         shapesManager.addShape(new Quadrilateral(new Point(500,500),new Point(500,400), new Point(550,420), new Point(525,540), new Point(480,480)));
 
-        //Create and configure our JFrame (window)
+        //Create and configure JFrame and passing in our shapesManager
         CustomWindow customWindow = new CustomWindow(shapesManager);
         customWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         customWindow.setTitle("L00177784 CA1");

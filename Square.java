@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.Point;
 
-public class Square extends Rectangle{
+public class Square extends Rectangle {
 
     public Square(int xCenter, int yCenter, Color colour, boolean filled, int width) {
         super(xCenter, yCenter, colour, filled, width);
@@ -13,6 +13,7 @@ public class Square extends Rectangle{
         g.setColor(Color.lightGray);
         g.drawRect(xCenter - width / 2, yCenter - width / 2, width, width);
     }
+
     @Override
     public void drawShape(Graphics g) {
         g.setColor(colour);
