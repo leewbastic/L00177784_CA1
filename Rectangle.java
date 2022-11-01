@@ -5,15 +5,15 @@ public class Rectangle extends Shape implements Moveable {
     protected int width;
     protected int height;
 
-    public Rectangle(int xCenter, int yCenter, Color colour, boolean filled, int width, int height) {
-        super(xCenter, yCenter, colour, filled);
+    public Rectangle(Color colour,int xCenter, int yCenter, boolean filled, int width, int height) {
+        super(colour, xCenter, yCenter, filled);
         this.width = width;
         this.height = height;
         setupBoundingBox();
     }
 
-    public Rectangle(int xCenter, int yCenter, Color colour, boolean filled, int width) {
-        super(xCenter, yCenter, colour, filled);
+    public Rectangle(Color colour, int xCenter, int yCenter, boolean filled, int width) {
+        super(colour, xCenter, yCenter, filled);
         this.width = width;
     }
     @Override

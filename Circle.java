@@ -4,8 +4,8 @@ import java.awt.Point;
 public class Circle extends Shape {
     private final int radius;
 
-    public Circle(int xCenter, int yCenter, Color colour, boolean filled, int radius) {
-        super(xCenter, yCenter, colour, filled);
+    public Circle(Color colour, int xCenter, int yCenter, boolean filled, int radius) {
+        super(colour, xCenter, yCenter, filled);
         this.radius = radius;
         setupBoundingBox();
     }

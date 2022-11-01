@@ -7,7 +7,7 @@ public abstract class Shape {
     protected int xCenter,yCenter;
     protected BoundingBox boundingBox;
 
-    public Shape(int xCenter, int yCenter, Color colour, boolean filled) {
+    public Shape(Color colour, int xCenter, int yCenter, boolean filled) {
         this.colour = colour;
         this.filled = filled;
         this.xCenter = xCenter;

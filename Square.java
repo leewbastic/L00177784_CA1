@@ -3,8 +3,8 @@ import java.awt.Point;
 
 public class Square extends Rectangle {
 
-    public Square(int xCenter, int yCenter, Color colour, boolean filled, int width) {
-        super(xCenter, yCenter, colour, filled, width);
+    public Square(Color colour,int xCenter, int yCenter, boolean filled, int width) {
+        super(colour, xCenter, yCenter, filled, width);
         setupBoundingBox();
     }
 

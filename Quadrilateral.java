@@ -5,26 +5,26 @@ import java.util.Arrays;
 public class Quadrilateral extends Shape implements Rotateable {
     private Point [] points;
 
-    public Quadrilateral(int xCenter, int yCenter, Color colour, boolean filled, Point[] points) {
-        super(xCenter, yCenter, colour, filled);
+    public Quadrilateral(Color colour, int xCenter, int yCenter, boolean filled, Point[] points) {
+        super(colour, xCenter, yCenter, filled);
         this.points = points;
         setupBoundingBox();
     }
 
     public Quadrilateral(Point centerPoint, Point[] points) {
-        super(centerPoint.x, centerPoint.y, Color.black, true);
+        super(Color.black, centerPoint.x, centerPoint.y, true);
         this.points = points;
         setupBoundingBox();
     }
 
     public Quadrilateral(Point centerPoint, Point p1, Point p2, Point p3, Point p4) {
-        super(centerPoint.x, centerPoint.y, Color.black, false);
+        super(Color.black, centerPoint.x, centerPoint.y,false);
         this.points = new Point[]{p1,p2,p3,p4};
         setupBoundingBox();
     }
 
     public Quadrilateral(Rectangle rectangle) {
-        super(rectangle.xCenter, rectangle.yCenter,rectangle.colour, rectangle.filled);
+        super(rectangle.colour, rectangle.xCenter, rectangle.yCenter, rectangle.filled);
         this.points = new Point[]{
                 (new Point(rectangle.xCenter- rectangle.width/2,rectangle.yCenter-rectangle.height/2)),
                 (new Point(rectangle.xCenter+ rectangle.width/2,rectangle.yCenter-rectangle.height/2)),
